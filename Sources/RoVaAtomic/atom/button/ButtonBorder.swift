@@ -157,8 +157,8 @@ struct ButtonBorder: View {
     
     public init(
         _ text: String,
-        _ style: ButtonFillStyle = .primary,
-        _ expand: Bool = false,
+        style: ButtonFillStyle = .primary,
+        expand: Bool = false,
         action: @escaping () -> Void) {
         self.text = text
         self.style = style
@@ -171,18 +171,18 @@ struct ButtonBorder_Preview: PreviewProvider {
     static var previews: some View {
         VStack (spacing: 32){
             VStack (spacing: 16) {
-                ButtonBorder("Button", .primary) {}
-                ButtonBorder("Button", .secondary) {}
-                ButtonBorder("Button", .tertiary) {}
-                ButtonBorder("Button", .error) {}
-                ButtonBorder("Button", .neutral) {}
+                ButtonBorder("Button", style: .primary) {}
+                ButtonBorder("Button", style: .secondary) {}
+                ButtonBorder("Button", style: .tertiary) {}
+                ButtonBorder("Button", style: .error) {}
+                ButtonBorder("Button", style: .neutral) {}
             }
             VStack (spacing: 16) {
-                ButtonBorder("Button", .primary,true) {}
-                ButtonBorder("Button", .secondary,true) {}
-                ButtonBorder("Button", .tertiary,true) {}
-                ButtonBorder("Button", .error,true) {}
-                ButtonBorder("Button", .neutral,true) {}
+                ButtonBorder("Button", style: .primary,expand: true) {}
+                ButtonBorder("Button", style: .secondary,expand: true) {}
+                ButtonBorder("Button", style: .tertiary,expand: true) {}
+                ButtonBorder("Button", style: .error,expand: true) {}
+                ButtonBorder("Button", style: .neutral,expand: true) {}
             }
         }
         .padding(.horizontal,16)
