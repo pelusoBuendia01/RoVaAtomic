@@ -7,21 +7,13 @@
 
 import SwiftUI
 
-public enum ButtonFillStyle {
-    case primary
-    case secondary
-    case tertiary
-    case error
-    case neutral
-}
-
 public struct ButtonFill: View {
     
     @Environment(\.colorScheme) private var colorScheme
     
     let text : String
     let action : () -> Void
-    var style : ButtonFillStyle
+    var style : RoVaFillStyle
     var expand : Bool
     
     private var background: Color {
@@ -169,7 +161,7 @@ public struct ButtonFill: View {
     
     public init(
         _ text: String,
-        style: ButtonFillStyle = .primary,
+        style: RoVaFillStyle = .primary,
         expand: Bool = false,
         action: @escaping () -> Void) {
         self.text = text
