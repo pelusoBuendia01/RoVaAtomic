@@ -13,7 +13,7 @@ struct ButtonBorder: View {
     
     let text : String
     let action : () -> Void
-    var style : ButtonFillStyle
+    var style : RoVaFillStyle
     var expand : Bool
     
     private var background: Color {
@@ -157,7 +157,7 @@ struct ButtonBorder: View {
     
     public init(
         _ text: String,
-        style: ButtonFillStyle = .primary,
+        style: RoVaFillStyle = .primary,
         expand: Bool = false,
         action: @escaping () -> Void) {
         self.text = text
