@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-struct RoVaColor {
+public enum RoVaFillStyle {
+    case primary
+    case secondary
+    case tertiary
+    case error
+    case neutral
+}
+
+public struct RoVaColor {
     
     static let opacityLight : CGFloat   = 0.7
     static let opacityDark  : CGFloat   = 0.5
